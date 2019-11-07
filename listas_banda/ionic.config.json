@@ -1,5 +1,7 @@
 {
   "name": "listas_banda",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
