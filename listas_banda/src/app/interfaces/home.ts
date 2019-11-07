@@ -1,4 +1,4 @@
-export interface ListI {
+export interface HomeI {
     name: string,
     redirectTo: string
 }

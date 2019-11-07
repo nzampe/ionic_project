@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListI } from 'src/app/interfaces/list';
 
 @Component({
   selector: 'app-lists',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListsPage implements OnInit {
 
-  lists: List[] = [
+  lists: ListI[] = [
     {
       name: 'Teatro 2018',
       redirectTo: '/'
@@ -23,9 +24,4 @@ export class ListsPage implements OnInit {
   ngOnInit() {
   }
 
-}
-
-interface List {
-  name: string,
-  redirectTo: string
 }

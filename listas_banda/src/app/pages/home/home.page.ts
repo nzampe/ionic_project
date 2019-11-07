@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomeI } from 'src/app/interfaces/home';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  components: Componente[] = [
+  components: HomeI[] = [
     {
       name: 'Listas de shows',
       redirectTo: '/lists'
@@ -20,9 +21,4 @@ export class HomePage {
 
   constructor() {}
 
-}
-
-interface Componente {
-  name: string,
-  redirectTo: string
 }
