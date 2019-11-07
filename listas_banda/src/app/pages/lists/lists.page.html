@@ -1,0 +1,11 @@
+<app-header title="Listas de shows"></app-header>
+
+<ion-content class="ion-padding">
+
+    <!-- Lista de shows ya precargadas -->
+    <ion-list>
+        <ion-item *ngFor="let l of lists" [routerLink]="l.redirectTo">
+            <ion-label> {{ l.name }} </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

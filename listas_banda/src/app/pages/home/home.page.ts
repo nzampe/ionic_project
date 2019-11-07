@@ -13,8 +13,8 @@ export class HomePage {
       redirectTo: '/lists'
     },
     {
-      name: 'Crear nueva lista',
-      redirectTo: '/'
+      name: 'Canciones',
+      redirectTo: '/songs'
     }
   ];
 

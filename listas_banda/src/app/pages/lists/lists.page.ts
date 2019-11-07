@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListsPage implements OnInit {
 
-  components: Componente[] = [
+  lists: List[] = [
     {
       name: 'Teatro 2018',
       redirectTo: '/'
@@ -25,7 +25,7 @@ export class ListsPage implements OnInit {
 
 }
 
-interface Componente {
+interface List {
   name: string,
   redirectTo: string
 }

@@ -1,0 +1,21 @@
+<app-header title="Canciones"></app-header>
+
+<ion-content>
+  <!-- Lista de canciones ya precargadas -->
+  <ion-list>
+    <ion-item *ngFor="let s of songs" [routerLink]="s.redirectTo">
+        <ion-label> {{ s.name }} </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- <form hidden>
+    <ion-item>
+      <ion-input id="input_song" type="text" placeholder="Inserte el nombre de la canción"></ion-input>
+    </ion-item>
+    <ion-button type="submit" size="small" >Agregar</ion-button>
+  </form> -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="newSong()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
