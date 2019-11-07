@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SongI } from 'src/app/interfaces/song';
+import { SongService } from 'src/app/services/song.service';
 
 @Component({
   selector: 'app-songs',
@@ -10,22 +11,54 @@ export class SongsPage implements OnInit {
 
   songs: SongI[] = [
     {
-      id: 1,
-      name: "Linda enfermedad"
+      name: "Linda enfermedad",
     },
     {
-      id: 2,
-      name: "Canciones sin dueño"
+      name: "Canciones sin dueño",
     },
     {
-      id: 3,
-      name: "Tan solo noches"
+      name: "Tan solo noches",
     }
   ]
 
-  constructor() { }
+  constructor(
+    public songsService: SongService 
+  ) {}
 
   ngOnInit() {
   }
+
+  newSong(){
+
+  }
+
+  // openAlertNewTask(){
+  //   let alert = this.alertCtrl.create({
+  //     title: 'Crear tarea',
+  //     message: 'escribe el nombre de la tarea',
+  //     inputs: [
+  //       {
+  //         name: 'title',
+  //         placeholder: 'Digitar nueva tarea.',
+  //       }
+  //     ],
+  //     buttons: [
+  //       {
+  //         text: 'Crear',
+  //         handler: (data)=>{ 
+  //           data.completed = false;
+  //           this.songsService.create(data)
+  //           .then(response => {
+  //             this.songs.unshift( data );
+  //           })
+  //           .catch( error => {
+  //             console.error( error );
+  //           })
+  //         }
+  //       }
+  //     ]
+  //   });
+  //   alert.present();
+  // }
 
 }
